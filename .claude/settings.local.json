@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npm -v)",
+      "Bash(npm install *)",
+      "Bash(grep -o '^\\\\.[a-z0-9-]*[,{ ]\\\\|^\\\\.[a-z0-9-]*$\\\\|^[a-z]*\\\\.[a-z0-9-]*' src/styles.css)",
+      "Bash(npm run *)",
+      "Bash(python3 -)",
+      "Bash(npx tsc *)",
+      "Bash(echo \"=== tsc exit: $? ===\")",
+      "Bash(echo \"=== exit $? ===\")",
+      "Bash(echo \"TSC_EXIT=$?\")",
+      "Bash(timeout 180 npx vite build)",
+      "Bash(echo \"---BUILD EXIT: $?---\")",
+      "Bash(timeout 8 npm run dev)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5175/)",
+      "Bash(curl -s -o /dev/null -w \"main.tsx: %{http_code}\\\\n\" http://localhost:5175/src/main.tsx)",
+      "Bash(pkill -f vite)",
+      "Bash(ps -p 684112 -o pid,ppid,cmd)",
+      "Bash(kill -9 684112)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "mcp-confluence",
+    "smartwiki"
+  ],
+  "disabledMcpjsonServers": [
+    "mcp-confluence",
+    "smartwiki"
+  ]
+}
